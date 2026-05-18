@@ -87,7 +87,8 @@ The demo (`openarm_can/examples/demo.cpp`) demonstrates the complete OpenArm API
 
 The first step involves creating the OpenArm instance and registering all motor devices with their corresponding CAN IDs and types.
 
-:::warning Vector Length Consistency
+:::warning
+Vector Length Consistency
 Ensure that `motor_types`, `send_can_ids`, and `recv_can_ids` vectors have the same length. Each motor requires exactly one entry in each vector at the corresponding index. Mismatched vector lengths can result in initialization errors or undefined behavior.
 :::
 
@@ -113,7 +114,8 @@ This section demonstrates how to enable motors and query their internal paramete
 Switch callback mode properly to parse the received frames.
 
 
-:::warning Timeout Values
+:::warning
+Timeout Values
 Use longer timeout values (1000-2000 microseconds) for slow operations like motor enabling and parameter queries. Fast control operations may use shorter timeouts (300-500 microseconds). Insufficient timeout values can result in missed responses and communication failures.
 :::
 

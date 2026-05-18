@@ -40,7 +40,8 @@ colcon build
 source ~/ros2_ws/install/setup.bash
 ```
 
-:::danger ⚠️ SAFETY REQUIREMENTS FOR HARDWARE OPERATION
+:::danger
+⚠️ SAFETY REQUIREMENTS FOR HARDWARE OPERATION
 
 Before operating with real hardware, you MUST:
 
@@ -204,6 +205,7 @@ The default gain is set to a relatively low value for safety. As a result, the a
 - Edit `assets/robot/openarm_v1.0/config/arm/control_gains.yaml`
 - Rebuild by `colcon build`
 
-:::danger ⚠️ GAIN TUNING SAFETY
+:::danger
+⚠️ GAIN TUNING SAFETY
 Please adjust the gain with great care. **Start with a lower gain and verify the behavior first, then increase it gradually.** If you execute an action with a large position difference while using a high gain, some controllers may generate dangerously high velocities.
 :::
